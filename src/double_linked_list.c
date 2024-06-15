@@ -310,34 +310,5 @@ DNode *search_DLinkedlist(DLinkedlist *list, int value) {
 }
 
 void sorted_insert_DLinkedlist(DLinkedlist *list, int value) {
-    DNode *node = create_DNode(value);
-
-    //case 1: list begin is null
-    if (is_empty(list)) {
-        node->next = list->begin;
-        node->prev = NULL;
-        list->end = list->begin = node;
-    }
-    else {
-        DNode *current = list->begin;
-        
-        while (current != NULL && current->value <= value) {
-            current = current->next;
-        }
-        node->next = current;
-
-        //case 2: Value is less than list->begin->value
-        if (list->begin == current) {
-            node->prev = NULL;
-            list->begin = node;
-        }
-        //case 3: Value is introduced between the list
-        else {
-            node->prev = current->prev;
-            current->prev->next = node;
-        }
-        current->prev = node;
-    }
-    list->size++;
 }
         /********************************************************************************************/

@@ -10,6 +10,7 @@ int main() {
     sorted_insert_DLinkedlist(teste, 5);
     sorted_insert_DLinkedlist(teste, 0);
     sorted_insert_DLinkedlist(teste, 1);
+    sorted_insert_DLinkedlist(teste , 200);
     print_DLinkedlist(teste);
     inverted_print_DLinkedlist(teste);
 
