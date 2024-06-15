@@ -1,5 +1,5 @@
-#ifndef TESTE_H
-#define TESTE_H
+#ifndef STACK_H
+#define STACK_H
 
 #include <stdbool.h>
 
@@ -10,7 +10,7 @@ Stack *init_Stack();
 Val *create_valNode(int value);
 bool is_stack_empty(Stack *stack);
 void push(Stack *stack, int val);
-void pop();
+void pop(Stack *stack);
 void print_Stack(Stack *stack);
 
 

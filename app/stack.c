@@ -1,4 +1,4 @@
-#include "../include/teste.h"
+#include "../include/stack.h"
 
 int main() {
     Stack *teste = init_Stack();
