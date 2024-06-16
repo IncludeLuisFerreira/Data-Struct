@@ -165,16 +165,58 @@ int countLeaves(TNode *root) {
     }
 }
 
-void mirrorTree(TNode *root);
+void mirrorTree(TNode *root) {
+    if (root == NULL) {
+        return ;
+    }
 
-bool areTreeEqual(TNode *root1, TNode *root2);
+    mirrorTree(root->left);
+    mirrorTree(root->right);
 
-TNode *findMin(TNode *root);
+    TNode *temp = root->left;
+    root->left = root->right;
+    root->right = temp;
+}
 
-TNode *findMax(TNode *root);
+bool areTreeEqual(TNode *root1, TNode *root2) {
+    if (root1 == NULL && root2 == NULL) {
+        return true;
+    }
 
+    if (root1 == NULL || root2 == NULL) {
+        return false;
+    }
 
+    return (root1->value == root2->value) && areTreeEqual(root1->left, root2->left) && areTreeEqual(root1->right, root2->right);
+}
 
+TNode *findMin(TNode *root) {
+    if (root != NULL) {
+        TNode *min = root;
+        
+        while (min->left != NULL) {
+            min = min->left;
+        }
+        return min;
+    }
+    else {
+        return NULL;
+    }
+}
+
+TNode *findMax(TNode *root) {
+    if (root != NULL) {
+        TNode *max = root;
+
+        while (max->right != NULL) {
+            max = max->right;
+        }
+        return max;
+    }
+    else {
+        return NULL;
+    }
+}
 
 void printTree(TNode *root) {
     if (root == NULL) {
