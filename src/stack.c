@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/****************************************************************** PRIVATE STRUCT ******************************************************************/
+/**************************************************************** PRIVATE STRUCT ****************************************************************/
 struct _value {
     int value;
     struct _value *next;
@@ -74,3 +74,26 @@ void print_Stack(Stack *stack) {
     }
 }
 
+int peek_stack(Stack *stack) {
+    if (is_stack_empty(stack)) {
+        return -999;
+    }
+    else {
+        return stack->top->value;
+    }
+}
+
+void destroy_stack(Stack **stack_ref) {
+    if (!is_stack_empty(*stack_ref)) {
+        Val *node = (*stack_ref)->top;
+        Val *next = NULL;
+
+        while (node != NULL) {
+            next = node->next;
+            free(node);
+            node = next;
+        } 
+    }
+    free(*stack_ref);
+    *stack_ref = NULL;
+}

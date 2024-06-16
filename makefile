@@ -21,3 +21,5 @@ all:
 	$(CC) $(CC_flags) $(SRC)queue.c -I $(H)/queue.h -o $(OBJ)queue.o
 	$(CC) $(APP)queue.c $(OBJ)queue.o -o $(EXE)queue.exe
 	
+	$(CC) $(CC_flags) $(SRC)tree.c -I $(H)/queue.h -o $(OBJ)tree.o
+	$(CC) $(APP)tree.c $(OBJ)tree.o -o $(EXE)tree.exe
