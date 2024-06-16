@@ -1,0 +1,5 @@
+# Ignorar arquivos executáveis
+*.exe
+
+#Ignorar pasta de executáveis
+exe/
