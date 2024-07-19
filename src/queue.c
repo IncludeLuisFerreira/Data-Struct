@@ -188,4 +188,34 @@ Queue *clone_queue(Queue *q) {
     return clone;
 }
 
+
+int sum_Queue(Queue *q) {
+    if (is_queue_empty(q)) {
+        fprintf(stderr, "Trying to sum an EMPTY LIST! Returning 0\n");
+    }
+    else {
+        Qval *node = q->front;
+        int sum = 0;
+        
+        for (; node != NULL; node = node->next) 
+            sum += node->value;
+
+        return sum;
+    }
+}
+
+void dequeue_NTimes(Queue *q, int pos) {
+    if (is_queue_empty(q)) {
+        fprintf(stderr, "Error: Trying to dequeue an EMPTY LIST!\n");
+    }
+    else {
+        if (pos < 0 || pos > q->size) {return ;}
+
+        for (int it = 0; it < pos; it++) {
+            dequeue(q);
+        }
+    }
+}
+
+
 /******************************************************************************************************************************************/

@@ -21,5 +21,8 @@ all:
 	$(CC) $(CC_flags) $(SRC)queue.c -I $(H)/queue.h -o $(OBJ)queue.o
 	$(CC) $(APP)queue.c $(OBJ)queue.o -o $(EXE)queue.exe
 	
-	$(CC) $(CC_flags) $(SRC)tree.c -I $(H)/queue.h -o $(OBJ)tree.o
+	$(CC) $(CC_flags) $(SRC)tree.c -I $(H)/tree.h -o $(OBJ)tree.o
 	$(CC) $(APP)tree.c $(OBJ)tree.o -o $(EXE)tree.exe
+
+	$(CC) $(CC_flags) $(SRC)PriorityQueue.c -I $(H)PriorityQueue.c -o $(OBJ)PriorityQueue.o
+	$(CC) $(APP)PriorityQueue.c $(OBJ)PriorityQueue.o -o $(EXE)PriorityQueue.exe

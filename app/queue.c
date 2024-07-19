@@ -14,13 +14,17 @@ int main() {
     for (int i = 0; i < 100; i++)
         dequeue(test);
 
-    /*********************************** */
-    
-    
-    
-    
     destroy_queue(&test);
-    
     print_queue(test);
+    /************************************/
+    
+    Queue *secondTest = init_queue();
+    for (int i = 0; i < 10; i++)
+        enqueue(secondTest, rand() % 100);
+
+    print_queue(secondTest);
+    dequeue_NTimes(secondTest, 5);
+    print_queue(secondTest);
+    printf("A soma eh: %d", sum_Queue(secondTest));
     return 0;
 }

@@ -21,5 +21,7 @@ Qval *search_queue(Queue *q, int value);
 void reverse_queue(Queue **q);
 Queue *clone_queue(Queue *q);
 void print_queue(Queue *q);
+int sum_Queue(Queue *q);
+void dequeue_NTimes(Queue *q, int pos);
 
 #endif
