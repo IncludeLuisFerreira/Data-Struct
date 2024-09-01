@@ -26,3 +26,6 @@ all:
 
 	$(CC) $(CC_flags) $(SRC)PriorityQueue.c -I $(H)PriorityQueue.c -o $(OBJ)PriorityQueue.o
 	$(CC) $(APP)PriorityQueue.c $(OBJ)PriorityQueue.o -o $(EXE)PriorityQueue.exe
+
+	$(CC) $(CC_flags) $(SRC)avltree.c -I $(H)avltree.c -o $(OBJ)avltree.o
+	$(CC) $(APP)avltree.c $(OBJ)avltree.o -o $(EXE)avltree.exe

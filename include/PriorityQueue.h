@@ -1,7 +1,6 @@
 #ifndef PRIORITYQUEUE_H
 #define PRIORITYQUEUE_H
 
-
 typedef struct cel Cel;
 typedef struct Pqueue Pqueue;
 

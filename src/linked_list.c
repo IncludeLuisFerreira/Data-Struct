@@ -1,6 +1,7 @@
 #include "../include/linked_list.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <limits.h>
 
 struct _node {
     int value;
@@ -250,7 +251,7 @@ size_t LinkedList_size(LinkedList *list) {
 int LinkedList_first_value(LinkedList *list) {
     if (Linked_list_is_empty(list)) {
         printf("\nEmpty list!\n");
-        return -1;
+        return INT_MIN;
     }
     else {
         return list->begin->value;
@@ -260,7 +261,7 @@ int LinkedList_first_value(LinkedList *list) {
 int LinkedList_last_value(LinkedList *list) {
     if (Linked_list_is_empty(list)) {
         printf("\nEmpty list\n");
-        return -1;
+        return INT_MIN;
     }
     else {
         return list->end->value;
@@ -270,12 +271,12 @@ int LinkedList_last_value(LinkedList *list) {
 int LinkedList_get_value(LinkedList *list, int index) {
     if (Linked_list_is_empty(list)) {
         printf("\nEmpty list\n");
-        return -1;
+        return INT_MIN;
     }
     else if (index < 0 || index >= list->size){
         fprintf(stderr, "\nError: invalid index!\n");
         fprintf(stderr, "try index : [0, %d[\n", list->size);
-        return -1;
+        return INT_MIN;
     }
     else {
         Node *pos = list->begin;
@@ -424,6 +425,7 @@ LinkedList *Linked_list_cat(const LinkedList *fir_list, const LinkedList *sec_li
     }
 }
 
+// I guess this isn't correct
 void Linked_list_sort(LinkedList **list_ref) {
     if (Linked_list_is_empty(*list_ref)) {
         fprintf(stderr, "Error in 'Linked_list_sort' ==> trying to sort an EMPTY list\n");

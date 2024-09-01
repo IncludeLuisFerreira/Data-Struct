@@ -135,7 +135,3 @@ void PriorityPrint(Pqueue *pq, int priority) {
             printf("Value: %d Priority: %d\n", node->value, node->priority);
     }
 }
-
-
-
-

@@ -2,19 +2,28 @@
 #include <stdio.h>
 
 int main() {
-    Stack *teste = init_Stack();
-    for (int i = 0; i < 10; i++)
-        push(teste, i);
 
-    print_Stack(teste);
-    pop(teste);
-    printf("%d",peek_stack(teste));
-    pop(teste);
-    print_Stack(teste);
+    Stack *origin = init_Stack();
+    Stack *dest = init_Stack();
+    Stack *vazia = init_Stack();
 
-    destroy_stack(&teste);
-    
-    
+    push(origin, 1);
+    push(origin, 5);
+    push(origin, 10);
 
+    stackcpy(origin, dest);
+    printf("Origem: \n");
+    print_Stack(origin);
+    printf("Destino: \n");
+    print_Stack(dest);
+
+
+    stackinvert(origin);
+    printf("Origin invertido: \n");
+    print_Stack(origin);
+
+    push(vazia, 1);
+    stackinvert(vazia);
+    print_Stack(vazia);
     return 0;
 }
