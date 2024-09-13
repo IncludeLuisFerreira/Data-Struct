@@ -29,3 +29,9 @@ all:
 
 	$(CC) $(CC_flags) $(SRC)avltree.c -I $(H)avltree.c -o $(OBJ)avltree.o
 	$(CC) $(APP)avltree.c $(OBJ)avltree.o -o $(EXE)avltree.exe
+
+	$(CC) $(CC_flags) $(SRC)hashtable.c -I $(H)hashtable.c -o $(OBJ)hashtable.o
+	$(CC) $(APP)hashtable.c $(OBJ)hashtable.o -o $(EXE)hashtable.exe
+
+	$(CC) $(CC_flags) $(SRC)dictionary.c -I $(H)dictionary.c -o $(OBJ)dictionary.o
+	$(CC) $(APP)dictionary.c $(OBJ)dictionary.o -o $(EXE)dictionary.exe
