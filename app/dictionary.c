@@ -2,7 +2,7 @@
 
 int main(int argc, char **argv) {
     
-    Dict *luis = initDict("Luis", 87);
+    Dict *luis = initDict(1);
     insertDict(luis, "idade", (void*) 19);
     insertDict(luis, "sexo", (void*) "masculino");
     insertDict(luis, "cursa", (void*) "Engenharia de computacao");
@@ -10,8 +10,9 @@ int main(int argc, char **argv) {
     insertDict(luis, "fav", (void*) "Kiriko");
     insertDict(luis, "gostade", (void*) "animacao");
     insertDict(luis, "dinheiro", (void*) 50);
+    printf("teste");
 
-    update(luis, "gostade", (void*) "Lobo");
+    insertDict(luis, "gostade", (void*) "Lobo");
     printf("Dicionario Luis:\n");
     printf("Idade: %d\n", (int) search(luis, "idade"));
     printf("Sexo: %s\n", (char*) search(luis, "sexo"));
@@ -23,12 +24,18 @@ int main(int argc, char **argv) {
 
     printfDict(luis);
 
-    getAllKeys(luis);
+    char **allkeys = getAllKeys(luis);
+   
+    if (allkeys) {
+        for (int i = 0; i < sizeof(allkeys)/sizeof(allkeys[0]); i++) {
+            printf("Chave %d: %s\n", i, allkeys[i]);
+        }
+    }
     
     if (contains(luis, "lobo"))
         printf("O dicionario possui a chave lobo\n");
     else
-        printf("O dicionario nao possui essa chave\n");
+        printf("O dicionario não possui essa chave\n");
 
 
     clear(luis);

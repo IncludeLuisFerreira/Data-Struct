@@ -2,7 +2,8 @@
 #define DICITIONARY_H
 
 #include <stdio.h>
-#define NULLSTRING      "nullstring"
+#define LOAD_FACTOR     0.75
+#define MAX_ATTEMPT     5
 
 typedef struct node {
     char *key;
@@ -10,7 +11,6 @@ typedef struct node {
 }node;
 
 typedef struct dictionary {
-    char *objectName;
     node ** table;
     size_t size;
     size_t maxsize;
@@ -18,18 +18,17 @@ typedef struct dictionary {
 
 /***********************************************************/
 
-Dict *initDict(char *nameofobject, size_t maxsize);
+Dict *initDict(size_t maxsize);
 
 void insertDict(Dict *, const char *key, void *item);
 
 void *search(Dict *, const char *key);
 
-void update(Dict *, const char *key, void *newitem);
-
 int contains(Dict *, const char *key);
 
 void printfDict(Dict *);
 
+void resize(Dict *dict);
 
 char **getAllKeys(Dict *);
 
