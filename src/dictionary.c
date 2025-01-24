@@ -1,13 +1,3 @@
-/**
- * 
- * 
- * 
- * tarefas: resolver os erros em printDict e getAllKeys
- * 
- * 
- */
-
-
 #include "../include/dictionary.h"
 #include <stdio.h>
 #include <stdlib.h>
