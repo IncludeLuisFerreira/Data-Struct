@@ -1,4 +1,4 @@
-#include "../include/circular_linked_list.h"
+#include "circular_linked_list.h"
 
 int main() {
     CList *teste = init_CList();

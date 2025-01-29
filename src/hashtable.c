@@ -1,4 +1,4 @@
-#include "../include/hashtable.h"
+#include "hashtable.h"
 
 hashTable* initializeHashTable(size_t size, size_t (*hashFunction) (size_t ,int)) {
     hashTable *newHashTable = (hashTable*) malloc(sizeof(hashTable));

@@ -3,3 +3,4 @@
 .gitignore
 .vscode
 *.o
+app/dynamicArray.c

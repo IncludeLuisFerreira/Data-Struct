@@ -1,4 +1,4 @@
-#include "../include/double_linked_list.h"
+#include "double_linked_list.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,7 +16,6 @@ struct double_linked {
     size_t size;
 };
 
-        /***********************************************************************/
 
         /********************************** FUNCTION DECLARATION ***********************************/
 
@@ -310,5 +309,15 @@ DNode *search_DLinkedlist(DLinkedlist *list, int value) {
 }
 
 void sorted_insert_DLinkedlist(DLinkedlist *list, int value) {
+    if (!list) {
+        fprintf(stderr, "\033[31mError in 'sorted_insert_DLinkedlist' ==> Trying to insert an EMPTY LIST!\033[0m\n");
+        exit(EXIT_FAILURE);
+    }
+
+
+
+
+
 }
-        /********************************************************************************************/
+        
+

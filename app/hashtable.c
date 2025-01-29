@@ -1,4 +1,4 @@
-#include "../include/hashtable.h"
+#include "hashtable.h"
 
 size_t Hash(size_t size, int value) {
     return value % size;

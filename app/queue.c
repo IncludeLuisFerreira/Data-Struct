@@ -1,4 +1,4 @@
-#include "../include/queue.h"
+#include "queue.h"
 #include <sys/time.h>
 #include <stdlib.h>
 

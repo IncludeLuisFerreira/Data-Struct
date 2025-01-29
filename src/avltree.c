@@ -1,4 +1,4 @@
-#include "../include/avltree.h"
+#include "avltree.h"
 
 /**************************************** Private Functions Utilitis ********************************************************** */
 

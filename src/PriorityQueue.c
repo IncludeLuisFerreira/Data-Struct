@@ -1,4 +1,4 @@
-#include "../include/PriorityQueue.h"
+#include "PriorityQueue.h"
 #include <stdio.h>
 #include <stdlib.h>
 

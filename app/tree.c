@@ -1,4 +1,4 @@
-#include "../include/tree.h"
+#include "tree.h"
 #include <stdio.h>
 
 int main() {

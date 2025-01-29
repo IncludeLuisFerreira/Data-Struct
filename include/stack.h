@@ -2,6 +2,8 @@
 #define STACK_H
 
 #include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef struct _value Val;
 typedef struct _stack Stack;
